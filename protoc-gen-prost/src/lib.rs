@@ -91,7 +91,7 @@ impl ModuleRequestSet {
                     if input_protos.contains(proto_filename) {
                         let filename = match proto.package() {
                             "" => default_package_filename.to_owned(),
-                            package => format!("{package}.rs"),
+                            package => format!("{package}_pb.rs"),
                         };
                         request.with_output_filename(filename);
                     }
